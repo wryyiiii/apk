@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>APK下载示例</title>
+<style>
+/* 添加一些基本的CSS样式 */
+body {
+    text-align: center; /* 使内容居中 */
+    font-family: Arial, sans-serif; /* 设置字体 */
+    margin-top: 50px; /* 页面顶部留白 */
+}
+
+button {
+    padding: 10px 20px; /* 按钮内边距 */
+    font-size: 16px; /* 字体大小 */
+    color: white; /* 文字颜色 */
+    background-color: #000000; /* 背景颜色 */
+    border: none; /* 无边框 */
+    border-radius: 5px; /* 圆角边框 */
+    cursor: pointer; /* 鼠标悬停时显示指针 */
+    transition: background-color 0.3s; /* 平滑过渡效果 */
+}
+
+button:hover {
+    background-color: #0056b3; /* 鼠标悬停时的背景颜色 */
+}
+</style>
+<script>
+function downloadApk() {
+    // 指定APK文件名
+    var apkFileName = "学习软件.apk";
+    // 创建一个下载链接
+    var a = document.createElement("a");
+    a.href = apkFileName;
+    a.download = apkFileName;
+
+    // 模拟点击下载链接
+    document.body.appendChild(a);
+    a.click();
+
+    // 清理并移除下载链接
+    document.body.removeChild(a);
+}
+</script>
+</head>
+<body>
+
+<button onclick="downloadApk()">下载学习软件</button>
+
+</body>
+</html>
